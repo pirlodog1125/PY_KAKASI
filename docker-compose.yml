@@ -1,0 +1,8 @@
+version: '2.1'
+services:
+  app:
+    image: lambci/lambda:build-python3.8 
+    volumes:
+      - ./$SOURCE_PATH:/var/task
+    command: >
+      zip -9 -r $ZIPFILE . 
